@@ -1,0 +1,173 @@
+/* THEME VARS */
+/* using these colors https://coolors.co/6abccc */
+:root {
+  --radius: 8px;
+  --theme: white;
+  --entry: rgb(247, 246, 239);
+  --primary: #74a892;
+  --secondary: #CC9C6B;
+  --tertiary: rgb(214, 214, 214);
+  --content: rgb(31, 31, 31);
+  --code-bg: rgb(245, 245, 245);
+  --border: rgb(238, 238, 238);
+
+  --club-category: hsl(197, 100%, 80%);
+  /* --club-category: white; */
+}
+
+.dark {
+  --theme: rgb(29, 30, 32);
+  --entry: rgb(46, 46, 51);
+  --primary: rgb(218, 218, 219);
+  --secondary: rgb(155, 156, 157);
+  --tertiary: rgb(65, 66, 68);
+  --content: rgb(196, 196, 197);
+  --border: rgb(51, 51, 51);
+}
+
+.list {
+  background: var(--code-bg);
+}
+
+.dark.list {
+  background: var(--theme);
+}
+
+
+/* LAYOUT */
+
+body {
+  background-color: var(--theme);
+  color: var(--content);
+  font-size: 125%;
+  line-height: 1.5;
+  max-width: 50rem;
+  /* padding: 1rem; */
+  margin: 0 auto;
+
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+.content {
+  margin: 0 15px;
+  margin-bottom: 2rem;
+  min-height: calc(100vh - 100px);
+}
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content p{
+  margin: 0;
+}
+.content p{
+  font-size: medium;
+}
+.content a {
+  color: var(--content);
+}
+
+/* CLUB TEMPLATE */
+
+.club{
+  padding: 15px 17px;
+  margin-bottom: 30px;
+  border-radius: 15px;
+  background-color: var(--club-category);
+}
+.club-title-container{
+  display: flex;
+  align-items: center;
+}
+.club h4{
+  margin: 0;
+}
+.club .club-description{
+  margin: 10px 0;
+}
+.club-category{
+  border-radius: 5px;
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  margin-left: 15px;
+  min-width: max-content;
+  background-color: var(--secondary);
+  color: white;
+}
+
+.club-info-container{
+  display: flex;
+  margin-top: 15px;
+}
+.club-info{
+  margin: 10px 0;
+  margin-right: 50px;
+}
+@media screen and (max-width: 650px) {
+  .club-info-container{
+    flex-direction: column;
+  }
+}
+
+
+
+
+
+/* FOOTER */
+footer p{
+  font-size: 1rem;
+  margin: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+
+/* HEADER */
+header {
+  position: sticky;
+  top: 0;
+  background-color: var(--theme);
+  margin: 20px 15px;
+}
+
+
+/* NAVIGATION */
+
+.site-nav {
+  display: flex;
+}
+
+.site-nav a {
+  display: block;
+  color: var(--content);
+  text-decoration: none;
+}
+
+.site-nav .logo {
+  font-weight: bold;
+  padding-left: 0;  
+}
+.site-nav .logo * {
+  margin: 0;
+}
+
+
+@media screen and (max-width: 48rem) {
+
+  .site-nav a {
+    padding: 0.5rem;
+    padding-left: 0;
+  }
+}
+
+/* LISTS */
+
+.post-snippet {
+  margin-bottom: 1rem;
+}
+
+.post-snippet h3 {
+  margin-bottom: 0.25rem;
+}
